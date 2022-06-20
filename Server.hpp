@@ -1,6 +1,7 @@
 //
 // Created by Tiffiny Harodon on 6/20/22.
 //
+#pragma once
 #include <iostream>
 #include <stdlib.h>
 #include <netdb.h>
@@ -14,6 +15,8 @@
 #include <fcntl.h>
 #include <map>
 #include <vector>
+
+#include "Constants.hpp"
 
 #ifndef UNTITLED_SERVER_H
 #define UNTITLED_SERVER_H
@@ -44,7 +47,7 @@ public:
         max_fd = server;
     }
 
-    _Noreturn void start(){
+    void start(){
         while (true){
             init_fd_set();
             select(max_fd + 100, &fd_read, &fd_write, NULL, NULL);
@@ -78,8 +81,7 @@ public:
             if (FD_ISSET(client[i], &fd_read)){
                 recv(client[i], buff, BUFFER_SIZE, 0);
                 std::cout << "Request: " << buff << std::endl;
-                send(client[i], ":IRC 375 123:-127.0.0.1 Message of the day -\n:IRC 372 123:-Hello peer\n:IRC 376 123 :End of /MOTD command\n",
-                     strlen(":IRC 375 123:-127.0.0.1 Message of the day -\n:IRC 372 123:-Hello peer\n:IRC 376 123 :End of /MOTD command\n"), 0);
+                send(client[i], Constants().toCharArray(Constants().register_message), Constants().register_message.length(), 0);
             }
         }
     }
