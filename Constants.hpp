@@ -9,19 +9,14 @@
 
 class Constants {
 public:
-    static std::string register_message;
-
-    Constants(){
-        register_message = ":IRC 375 123:-127.0.0.1 Message of the day -\n:IRC 372 123:-Hello peer\n:IRC 376 123 :End of /MOTD command\n";
-    }
-
-    static char* toCharArray(std::string str){
-        char *array = new char [str.length()];
-        for (int i = 0; i < str.length(); i++){
-            array[i] = str[i];
-        }
-        return array;
-    }
+    const std::string register_message;
+    const std::string ping;
+    const std::string pong;
+    Constants() : register_message(":IRC 375 123:-127.0.0.1 Message of the day -\n:IRC 372 123:-Hello peer\n:IRC 376 123 :End of /MOTD command\n"),
+                  ping("PING ircserv\n"),
+                  pong("PONG "){
+    };
+    ~Constants(){};
 };
 
 

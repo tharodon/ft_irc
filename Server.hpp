@@ -22,6 +22,7 @@
 #define UNTITLED_SERVER_H
 
 #define BUFFER_SIZE 1024
+#include "Constants.hpp"
 
 class Server {
 private :
@@ -81,7 +82,7 @@ public:
             if (FD_ISSET(client[i], &fd_read)){
                 recv(client[i], buff, BUFFER_SIZE, 0);
                 std::cout << "Request: " << buff << std::endl;
-                send(client[i], Constants().toCharArray(Constants().register_message), Constants().register_message.length(), 0);
+                send(client[i], Constants().register_message.c_str(), Constants().register_message.length(), 0);
             }
         }
     }
