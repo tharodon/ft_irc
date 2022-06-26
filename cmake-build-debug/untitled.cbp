@@ -80,13 +80,25 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/tharodon/ft_irc/Constants.hpp">
-			<Option target="untitled"/>
-		</Unit>
-		<Unit filename="/Users/tharodon/ft_irc/Server.hpp">
-			<Option target="untitled"/>
-		</Unit>
 		<Unit filename="/Users/tharodon/ft_irc/main.cpp">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="/Users/tharodon/ft_irc/repository/UserRepository.hpp">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="/Users/tharodon/ft_irc/server/Server.hpp">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="/Users/tharodon/ft_irc/user/User.hpp">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="/Users/tharodon/ft_irc/user/UserMapper.hpp">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="/Users/tharodon/ft_irc/user/UserService.hpp">
+			<Option target="untitled"/>
+		</Unit>
+		<Unit filename="/Users/tharodon/ft_irc/utils/Constants.hpp">
 			<Option target="untitled"/>
 		</Unit>
 		<Unit filename="/Users/tharodon/ft_irc/CMakeLists.txt">

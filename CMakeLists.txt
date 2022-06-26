@@ -3,4 +3,4 @@ project(untitled)
 
 set(CMAKE_CXX_STANDARD 98)
 
-add_executable(untitled main.cpp Server.hpp Constants.hpp)
+add_executable(untitled main.cpp server/Server.hpp utils/Constants.hpp user/User.hpp repository/UserRepository.hpp user/UserService.hpp user/UserMapper.hpp)
